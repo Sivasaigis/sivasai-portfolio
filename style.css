@@ -1,0 +1,116 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background: #003366;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+.profile-pic {
+  width: 120px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+}
+
+nav {
+  background: #222;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 2rem 1rem;
+}
+
+.project-slider {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.project {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-list li {
+  background: #003366;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+/* Fade and Slide Animation */
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Bouncing Skills Tags */
+.skills-list li {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: bounceIn 0.5s forwards;
+}
+
+.skills-list li.bounce-in {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
